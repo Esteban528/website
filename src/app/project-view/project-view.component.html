@@ -1,0 +1,51 @@
+<div class="lg:mx-auto lg:w-1/2 mt-5 p-3 text-white">
+  <a
+    routerLink="/"
+    class="text-white bg-slate-400/40 hover:bg-slate-600/40 w-max py-1 px-2 rounded-lg flex gap-2 border border-gray-900/60 shadow shadow-gray-900/20"
+  >
+    Volver al inicio
+  </a>
+
+  <h1 class="text-center font-bold text-2xl mt-4">{{ project.title }}</h1>
+
+  <div class="flex gap-2 my-2">
+    <a
+      [href]="project.link"
+      target="_blank"
+      class="text-white bg-blue-400 hover:bg-blue-600 w-max p-1 px-2 rounded-lg flex gap-2 items-center border border-blue-900/60 shadow shadow-gray-900/20"
+    >
+      <lucide-angular [img]="ExternalLink" class="my-icon text-white"></lucide-angular>
+      Link
+    </a>
+
+    <a
+      [href]="project.source_code"
+      target="_blank"
+      class="text-white bg-gray-600/70 hover:bg-gray-700/40 w-max py-1 px-2 rounded-lg flex gap-2 items-center border border-gray-600/60 shadow shadow-gray-900/80"
+    >
+      <lucide-angular [img]="GitMerge" class="my-icon text-white"></lucide-angular>
+      Source code
+    </a>
+  </div>
+
+  @if (project.image_url !== "") {
+    <img [src]="project.image_url" alt="Vista previa" class="w-full rounded-lg mt-3"/>
+  }
+
+  <div class="flex gap-5 mt-5 flex-wrap">
+    @for (tech of project.stack; track tech) {
+      <div class="bg-blue-400/50 py-0.5 px-2 rounded-lg border border-blue-300/40">
+        {{ tech }}
+      </div>
+    }
+  </div>
+
+  <p class="mt-5 whitespace-pre-line">{{ project.description }}</p>
+
+  @if (project.youtube_url) {
+    <h2 class="text-2xl font-bold mt-5">Demostración</h2>
+    <div class="w-full flex justify-center mt-2">
+      <app-youtube-player [id]="project.youtube_url"></app-youtube-player>
+    </div>
+  }
+</div>

@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Documentación Oficial de React",
+    "description": "La fuente principal para aprender React, con guías, tutoriales y ejemplos.",
+    "link": "https://react.dev/",
+    "image_url": "https://th.bing.com/th/id/R.08e9207c8a79c62fa47aafc659a0e173?rik=l4WRgnXLTLfxgA&pid=ImgRaw&r=0"
+  },
+  {
+    "title": "Guía de TypeScript",
+    "description": "Documentación oficial para aprender y dominar TypeScript, desde lo básico hasta conceptos avanzados.",
+    "link": "https://www.typescriptlang.org/docs/",
+    "image_url": "https://th.bing.com/th/id/R.08e9207c8a79c62fa47aafc659a0e173?rik=l4WRgnXLTLfxgA&pid=ImgRaw&r=0"
+  },
+  {
+    "title": "TailwindCSS",
+    "description": "Framework de CSS para construir interfaces modernas rápidamente con clases utilitarias.",
+    "link": "https://tailwindcss.com/",
+    "image_url": "https://th.bing.com/th/id/R.08e9207c8a79c62fa47aafc659a0e173?rik=l4WRgnXLTLfxgA&pid=ImgRaw&r=0"
+  },
+  {
+    "title": "MDN Web Docs",
+    "description": "Referencias y guías completas sobre HTML, CSS y JavaScript, mantenidas por Mozilla.",
+    "link": "https://developer.mozilla.org/",
+    "image_url": "https://th.bing.com/th/id/R.08e9207c8a79c62fa47aafc659a0e173?rik=l4WRgnXLTLfxgA&pid=ImgRaw&r=0"
+  },
+  {
+    "title": "Roadmap.sh",
+    "description": "Mapas visuales de rutas de aprendizaje para desarrolladores, incluyendo backend, frontend, DevOps y más.",
+    "link": "https://roadmap.sh/",
+    "image_url": "https://th.bing.com/th/id/R.08e9207c8a79c62fa47aafc659a0e173?rik=l4WRgnXLTLfxgA&pid=ImgRaw&r=0"
+  },
+  {
+    "title": "FreeCodeCamp",
+    "description": "Plataforma de aprendizaje gratuita para programación, ciencia de datos, desarrollo web y más.",
+    "link": "https://www.freecodecamp.org/",
+    "image_url": "https://th.bing.com/th/id/R.08e9207c8a79c62fa47aafc659a0e173?rik=l4WRgnXLTLfxgA&pid=ImgRaw&r=0"
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Post de prueba",
+    "date": "2025-04-29",
+    "content": "# Hola\n\nTypeScript es un superset de JavaScript que añade tipado estático.\n\n## Instalación\n\n```bash\nnpm install -g typescript\n```\n\n## Primer archivo\n\n```ts\nfunction saludar(nombre: string) {\n  return `Hola, ${nombre}`;\n}\n```\n\nMás información en [typescriptlang.org](https://www.typescriptlang.org/).\n ```js\nconst hola = 'hola';\n```",
+    "description": "Una guía rápida para iniciarte en el mundo de TypeScript."
+  },
+  {
+    "title": "Cómo empezar con TypeScript",
+    "date": "2025-04-10",
+    "content": "# Hola\n\nTypeScript es un superset de JavaScript que añade tipado estático.\n\n## Instalación\n\n```bash\nnpm install -g typescript\n```\n\n## Primer archivo\n\n```ts\nfunction saludar(nombre: string) {\n  return `Hola, ${nombre}`;\n}\n```\n\nMás información en [typescriptlang.org](https://www.typescriptlang.org/).\n ```js\nconst hola = 'hola';\n```",
+    "description": "Una guía rápida para iniciarte en el mundo de TypeScript."
+  },
+  {
+    "title": "Buenas prácticas con Git",
+    "date": "2025-03-28",
+    "content": "# Buenas prácticas con Git\n\n- Usa commits atómicos.\n- Escribe mensajes claros con imperativo: `Agrega validación de email`.\n- Mantén ramas pequeñas y enfocadas.\n\n## Ejemplo de flujo\n\n```bash\ngit checkout -b feature/login\n# Hacer cambios\ngit commit -m \"Agrega formulario de login\"\ngit push origin feature/login\n```\n",
+    "description": "Aprende a usar Git de forma profesional y eficiente."
+  },
+  {
+    "title": "¿Qué es Docker y para qué sirve?",
+    "date": "2025-03-14",
+    "content": "# ¿Qué es Docker?\n\nDocker permite crear contenedores ligeros que empaquetan tu aplicación y sus dependencias.\n\n## Primer contenedor\n\n```bash\ndocker run hello-world\n```\n\n## Beneficios\n\n- Aislamiento\n- Portabilidad\n- Facilidad para despliegue\n\nMás en [docker.com](https://www.docker.com/).\n",
+    "description": "Una introducción clara y práctica al mundo de Docker."
+  },
+  {
+    "title": "Diferencias entre REST y GraphQL",
+    "date": "2025-02-19",
+    "content": "# REST vs GraphQL\n\n| Característica | REST | GraphQL |\n|---------------|------|---------|\n| Tipo de API   | Múltiples endpoints | Un solo endpoint |\n| Overfetching  | Sí | No |\n| Herramientas  | Postman, Swagger | GraphiQL, Apollo |\n\n## Ejemplo GraphQL\n\n```graphql\nquery {\n  usuario(id: 1) {\n    nombre\n    email\n  }\n}\n```\n",
+    "description": "Comparativa técnica para elegir la mejor arquitectura de API según tu proyecto."
+  },
+  {
+    "title": "Cómo escribir tests efectivos en Java",
+    "date": "2025-01-30",
+    "content": "# Tests efectivos en Java\n\nUsa JUnit y Mockito para tests unitarios confiables.\n\n## Ejemplo JUnit\n\n```java\n@Test\nvoid sumaDebeSerCorrecta() {\n  assertEquals(4, calculadora.sumar(2, 2));\n}\n```\n\n## Consejos\n\n- Nombra bien los métodos de test.\n- Evita dependencias reales, usa mocks.\n- Testea casos límite.\n",
+    "description": "Guía práctica para mejorar la calidad del código Java con pruebas automatizadas."
+  }
+]

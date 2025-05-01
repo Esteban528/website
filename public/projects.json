@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Portfolio Web",
+    "short_description": "Un sitio web personal para mostrar proyectos y habilidades.",
+    "description": "Desarrollé un sitio web responsivo utilizando React y TailwindCSS para presentar mis proyectos, experiencia laboral y habilidades técnicas.",
+    "stack": ["React", "TailwindCSS", "Vite", "TypeScript"],
+    "link": "https://miportfolio.com",
+    "source_code": "https://github.com/usuario/portfolio-web",
+    "image_url": "https://i.imgur.com/yAkygiE.png",
+    "youtube_url": "S4EjKubf-ww"
+  },
+  {
+    "title": "API REST de Tareas",
+    "short_description": "Backend para gestionar tareas pendientes.",
+    "description": "Una API REST desarrollada en Spring Boot para crear, leer, actualizar y eliminar tareas. Incluye autenticación JWT y pruebas unitarias.",
+    "stack": ["Java", "Spring Boot", "PostgreSQL", "Docker"],
+    "link": "https://apitareas.com",
+    "source_code": "https://github.com/usuario/api-tareas",
+    "image_url": "https://i.imgur.com/yAkygiE.png",
+    "youtube_url": ""
+  },
+  {
+    "title": "App Móvil de Recetas",
+    "short_description": "Aplicación móvil para descubrir y guardar recetas.",
+    "description": "Aplicación desarrollada en Flutter que permite buscar, guardar y compartir recetas de cocina, con integración a una API externa.",
+    "stack": ["Flutter", "Dart", "Firebase"],
+    "link": "https://recetasapp.com",
+    "source_code": "https://github.com/usuario/recetas-app",
+    "image_url": "https://i.imgur.com/yAkygiE.png",
+    "youtube_url": "https://www.youtube.com/watch?v=lmnopqrstuv"
+  },
+  {
+    "title": "Sistema de Gestión Escolar",
+    "short_description": "Plataforma para administrar instituciones educativas.",
+    "description": "Desarrollé una plataforma web que gestiona inscripciones, calificaciones, horarios y reportes para colegios y universidades.",
+    "stack": ["Angular", "Node.js", "MongoDB", "Express"],
+    "link": "https://gestionescolar.com",
+    "source_code": "https://github.com/usuario/gestion-escolar",
+    "image_url": "https://i.imgur.com/yAkygiE.png",
+    "youtube_url": "https://www.youtube.com/watch?v=xyzabc12345"
+  },
+  {
+    "title": "Bot de Discord de Música",
+    "short_description": "Bot que reproduce música desde YouTube en servidores de Discord.",
+    "description": "Un bot desarrollado en Node.js que permite a los usuarios de Discord reproducir, pausar y gestionar listas de reproducción desde YouTube.",
+    "stack": ["Node.js", "Discord.js", "YouTube API"],
+    "link": "https://discordbotmusic.com",
+    "source_code": "https://github.com/usuario/discord-music-bot",
+    "image_url": "https://i.imgur.com/yAkygiE.png",
+    "youtube_url": "https://www.youtube.com/watch?v=musicbotvideo"
+  },
+  {
+    "title": "E-commerce de Ropa",
+    "short_description": "Tienda en línea especializada en moda juvenil.",
+    "description": "Desarrollé un e-commerce completo con carrito de compras, pasarela de pago integrada y panel de administración para productos y pedidos.",
+    "stack": ["Next.js", "Stripe", "Prisma", "PostgreSQL"],
+    "link": "https://tiendaropa.com",
+    "source_code": "https://github.com/usuario/ecommerce-ropa",
+    "image_url": "https://i.imgur.com/yAkygiE.png",
+    "youtube_url": "https://www.youtube.com/watch?v=tiendavideo"
+  }
+]
