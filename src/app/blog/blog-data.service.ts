@@ -13,12 +13,16 @@ export class BlogDataService {
     this.http.get<Post[]>(environment.postsUrl).subscribe(func);
   }
 
-  loadPost(index: number, func: (post: Post) => void) {
-    this.loadAllPost((posts: Post[]) => func(posts[index]));
+  loadPost(id: number, func: (post: Post | undefined) => void) {
+    this.loadAllPost((posts: Post[]) => {
+      const post = posts.find((p: Post) => p.id == id);
+      func(post);
+    });
   }
 }
 
 export type Post = {
+  id: number,
   title: string,
   date: string,
   content: string,
