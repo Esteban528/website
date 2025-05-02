@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from '../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,7 @@ export class ProjectsService {
   constructor(private http: HttpClient) { }
 
   loadProjects(func: (projects: Project[]) => void) {
-    this.http.get<Project[]>('/projects.json').subscribe(func);
+    this.http.get<Project[]>(environment.projectsUrl).subscribe(func);
   }
 
   loadProject(index: number, func: (project: Project) => void) {
@@ -19,7 +20,7 @@ export class ProjectsService {
   }
 
   loadResources(func: (projects: Resource[]) => void) {
-    this.http.get<Project[]>('/resources.json').subscribe(func);
+    this.http.get<Project[]>(environment.resourcesUrl).subscribe(func);
   }
 }
 
