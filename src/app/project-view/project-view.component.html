@@ -18,14 +18,24 @@
       Link
     </a>
 
-    <a
-      [href]="project.source_code"
-      target="_blank"
-      class="text-white bg-gray-600/70 hover:bg-gray-700/40 w-max py-1 px-2 rounded-lg flex gap-2 items-center border border-gray-600/60 shadow shadow-gray-900/80"
-    >
-      <lucide-angular [img]="GitMerge" class="my-icon text-white"></lucide-angular>
-      Source code
-    </a>
+    @if (project.source_code) {
+      <a
+        [href]="project.source_code"
+        target="_blank"
+        class="text-white bg-gray-600/70 hover:bg-gray-700/40 w-max py-1 px-2 rounded-lg flex gap-2 items-center border border-gray-600/60 shadow shadow-gray-900/80"
+      >
+        <lucide-angular [img]="GitMerge" class="my-icon text-white"></lucide-angular>
+        Source code
+      </a>
+    } @else {
+      <button
+        disabled
+        class="text-white bg-gray-800/70 w-max py-1 px-2 rounded-lg flex gap-2 items-center border border-gray-600/60 shadow shadow-gray-900/80"
+      >
+        <lucide-angular [img]="GitMerge" class="my-icon text-white"></lucide-angular>
+        Closed source
+      </button>
+    }
   </div>
 
   @if (project.image_url !== "") {
