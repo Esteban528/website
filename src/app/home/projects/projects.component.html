@@ -7,11 +7,13 @@
         rounded-lg shadow shadow-slate-500/10 max-w-md flex flex-col justify-between"
       >
         @if (item.image_url) {
-          <img
-            [attr.src]="item.image_url"
-            alt="Project image"
-            class="w-full max-h-52 rounded-lg"
-          />
+          <div class="h-40">
+            <img
+              [attr.src]="item.image_url"
+              alt="Project image"
+              class="w-full h-full rounded-lg"
+            />
+          </div>
         } @else {
           <div class="w-full h-52">No content</div>
         }
