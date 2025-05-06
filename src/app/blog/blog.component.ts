@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { BlogDataService, Post } from './blog-data.service';
 import { LucideAngularModule, Rss } from 'lucide-angular';
 import { RouterLink } from '@angular/router';
@@ -9,7 +9,7 @@ import { RouterLink } from '@angular/router';
   templateUrl: './blog.component.html',
   styleUrl: './blog.component.css'
 })
-export class BlogComponent {
+export class BlogComponent implements OnInit {
   private posts!: Array<Post>;
   private dateText = {
     today: () => "Hoy",
@@ -20,8 +20,11 @@ export class BlogComponent {
 
   readonly Rss = Rss;
 
-  constructor(service: BlogDataService) {
-    service.loadAllPost((p) => this.setPosts(p));
+  constructor(private service: BlogDataService) {
+  }
+
+  ngOnInit(): void {
+    this.service.loadAllPost((p) => this.setPosts(p));
   }
 
   setPosts(posts: Array<Post>) {

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ExternalLink, GitMerge, LucideAngularModule } from 'lucide-angular';
 import { Project, ProjectsService } from '../../projects.service';
 import { RouterLink } from '@angular/router';
@@ -9,11 +9,14 @@ import { RouterLink } from '@angular/router';
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.css'
 })
-export class ProjectsComponent {
+export class ProjectsComponent implements OnInit {
   projects: Array<Project> = [];
 
-  constructor(projectService: ProjectsService) {
-    projectService.loadProjects((result:Array<Project>) => this.setProjects(result));
+  constructor(private projectService: ProjectsService) {
+  }
+
+  ngOnInit(): void {
+    this.projectService.loadProjects((result: Array<Project>) => this.setProjects(result));
   }
 
   setProjects(result: Array<Project>) {
