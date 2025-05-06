@@ -5,7 +5,7 @@
   >
     Volver al inicio
   </a>
-
+  @if(project) {
   <h1 class="text-center font-bold text-2xl mt-4">{{ project.title }}</h1>
 
   <div class="flex gap-2 my-2">
@@ -122,4 +122,6 @@
       <app-youtube-player [id]="project.youtube_url"></app-youtube-player>
     </div>
   }
+  }
+
 </div>

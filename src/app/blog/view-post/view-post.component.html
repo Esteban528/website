@@ -1,17 +1,19 @@
 <div class="lg:mx-auto lg:w-3/4 mt-5 p-3 text-white flex-col justify-center">
-  <div class="flex items-center gap-2 mb-5">
-    <a
-      routerLink="/blog"
-      class="text-white bg-slate-400/40 hover:bg-slate-600/40 w-max py-1 px-2 rounded-lg flex gap-2 border border-gray-900/60 shadow shadow-gray-900/20"
-    >
-      Todos los posts </a
-    >/
-    <h1 class="font-black">{{ post.title }}</h1>
-  </div>
+  @if (post) {
+    <div class="flex items-center gap-2 mb-5">
+      <a
+        routerLink="/blog"
+        class="text-white bg-slate-400/40 hover:bg-slate-600/40 w-max py-1 px-2 rounded-lg flex gap-2 border border-gray-900/60 shadow shadow-gray-900/20"
+      >
+        Todos los posts </a
+      >/
+      <h1 class="font-black">{{ post.title }}</h1>
+    </div>
 
-  <div
-    class="prose prose-sm sm:prose lg:prose-lg xl:prose-xl dark:prose-invert"
-  >
-    <markdown>{{ post.content }}</markdown>
-  </div>
+    <div
+      class="prose prose-sm sm:prose lg:prose-lg xl:prose-xl dark:prose-invert"
+    >
+      <markdown>{{ post.content }}</markdown>
+    </div>
+  }
 </div>
