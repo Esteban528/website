@@ -6,13 +6,9 @@ import { ProfileComponent } from './profile/profile.component';
 
 @Component({
   selector: 'app-home',
-  imports: [LucideAngularModule, ProjectsComponent, ResourcesComponent, ProfileComponent],
+  imports: [ProjectsComponent, ResourcesComponent, ProfileComponent],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
 })
 
 export class HomeComponent {
-  readonly Mail = Mail;
-  readonly Linkedin = Linkedin;
-  readonly Github = Github;
 }

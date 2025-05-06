@@ -4,8 +4,8 @@
     "short_description": "Un sitio web personal para mostrar proyectos y habilidades.",
     "description": "Desarrollé un sitio web responsivo utilizando React y TailwindCSS para presentar mis proyectos, experiencia laboral y habilidades técnicas.",
     "stack": ["React", "TailwindCSS", "Vite", "TypeScript"],
-    "link": "https://miportfolio.com",
-    "source_code": "https://github.com/usuario/portfolio-web",
+    "link": "",
+    "source_code": "",
     "image_url": "https://i.imgur.com/yAkygiE.png",
     "youtube_url": "S4EjKubf-ww"
   },

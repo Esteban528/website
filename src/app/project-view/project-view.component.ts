@@ -7,14 +7,11 @@ import { YoutubePlayerComponent } from './youtube-player/youtube-player.componen
 
 @Component({
   selector: 'app-project-view',
-  imports: [RouterLink, LucideAngularModule, YoutubePlayerComponent],
+  imports: [RouterLink, YoutubePlayerComponent],
   templateUrl: './project-view.component.html',
   styleUrl: './project-view.component.css'
 })
 export class ProjectViewComponent {
-  readonly Undo = Undo2;
-  readonly ExternalLink = ExternalLink;
-  readonly GitMerge = Github;
   project!:Project;
 
   constructor(private service:ProjectsService, private sanitizer:DomSanitizer) {

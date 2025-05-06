@@ -4,14 +4,12 @@ import { ExternalLink, LucideAngularModule } from 'lucide-angular';
 
 @Component({
   selector: 'app-resources',
-  imports: [LucideAngularModule],
+  imports: [],
   templateUrl: './resources.component.html',
   styleUrl: './resources.component.css'
 })
 export class ResourcesComponent implements OnInit{
   resources!:Array<Resource>;
-  readonly ExternalLink = ExternalLink;
-
   constructor(private service:ProjectsService) {
 
   }
