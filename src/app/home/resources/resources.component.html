@@ -5,8 +5,8 @@
       <a
         [attr.href]="item.link"
         target="_blank"
-        class="bg-slate-800/50 hover:bg-slate-700/50 transition-all duration-300 p-4 border
-        border-slate-500 rounded-lg shadow shadow-slate-500/10 w-full flex justify-between gap-5 items-center"
+        class="bg-black/50 hover:bg-slate-700/50 transition-all duration-300 p-4 border
+        border-slate-500/40 rounded-lg shadow shadow-slate-500/10 w-full flex justify-between gap-5 items-center"
       >
         @if (item.image_url) {
           <img
@@ -19,10 +19,10 @@
         }
 
         <div class="flex flex-col justify-between">
-          <p class="text-white font-bold text-2xl mt-2">
+          <p class="text-slate-200 font-bold text-2xl mt-2">
             {{ item.title }}
           </p>
-          <p class="text-white/70">
+          <p class="text-slate-200/70">
             {{ item.description }}
           </p>
           <div class="flex gap-2 mt-2"></div>
