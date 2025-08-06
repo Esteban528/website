@@ -1,15 +1,17 @@
 <div class="lg:mx-auto lg:w-3/4 mt-5 p-3 text-white">
-  <div class="mx-auto w-2/3 lg:w-full p-6 lg:flex justify-between gap-36 bg-black/30 rounded-lg border border-slate-500/40">
+  <div
+    class="lg:mx-auto w-full p-2 lg:p-6 lg:flex justify-between gap-36 lg:bg-black/30 rounded-lg lg:border lg:border-slate-500/40"
+  >
     <div class="flex flex-col gap-5">
       <h2 class="font-bold text-2xl text-center lg:text-left" id="aboutme">
-        Sobre mí
+        Perfil profesional
       </h2>
       <span class="font-light">
         En esta sección se limita a mostrar información que se desea hacer
         pública, temas como educación, curriculum e información personal solo se
-        envian por e-mail.
+        envian por privado.
       </span>
-      <div class="my-8 flex justify-around items-center gap-20">
+      <div class="my-8 flex flex-col justify-around items-center gap-20">
         <img
           ngSrc="/profile.webp"
           alt="foto de perfil"
@@ -18,25 +20,16 @@
           height="320"
           priority
         />
-
-        <div
-          class="hidden 2xl:block p-4 font-serif text-2xl text-gray-100/60 -rotate-5 shadow shadow-black/50"
-        >
-          <p>
-            " Aprender un lenguaje de programación te da una herramienta, pero
-            limitarte a eso es como tener un martillo sin saber construir:
-            aprender a programar de verdad es lo que te da el poder de crear,
-            resolver problemas reales y transformar tus ideas en algo tangible.
-          </p>
+        <div class="text-gray-300">
+          <p>"Avoiding complexity reduces bugs."</p>
+          <span class="text-xs">Linus Torvalds</span>
         </div>
       </div>
       <div class="flex flex-col gap-5">
         <p>
           ¡Hola! Soy Esteban Gonzalez, desarrollador especializado en backend,
-          con una sólida formación como full stack. Mi aventura en el mundo de
-          la programación comenzó en 2020, impulsada por una profunda curiosidad
-          que, con el tiempo, se convirtió en una verdadera pasión y parte
-          fundamental de mi vida diaria.
+          con una sólida formación como full stack. Llevo implementando soluciones
+          laboralmente desde 2022, con un enfoque alto en la excelencia y el minimalismo.
         </p>
         <p>
           Desde el inicio, he sido un autodidacta disciplinado, con un enfoque
@@ -207,15 +200,8 @@
     <div class="w-full min-w-80">
       <div
         class="hidden md:block 2xl:hidden mt-10 mb-20 rounded-lg p-4 font-serif text-2xl text-gray-100/60 -rotate-5 shadow shadow-black/50"
-      >
-        <p>
-          " Aprender un lenguaje de programación te da una herramienta, pero
-          limitarte a eso es como tener un martillo sin saber construir:
-          aprender a programar de verdad es lo que te da el poder de crear,
-          resolver problemas reales y transformar tus ideas en algo tangible.
-        </p>
-      </div>
-      <h2 class="font-bold text-2xl">Tecnologías con mayor experiencia</h2>
+      ></div>
+      <h2 class="font-bold text-2xl mt-8">Tecnologías con mayor experiencia</h2>
       <h3 class="font-bold mb-5">Lenguajes de programación</h3>
       <div class="grid grid-cols-3">
         <div class="flex flex-col items-center max-w-20">
@@ -227,7 +213,6 @@
           />
           <p>Java</p>
         </div>
-
         <div class="flex flex-col items-center max-w-20">
           <img
             width="80"
@@ -244,6 +229,15 @@
             ngSrc="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
           />
           <p>Javascript</p>
+        </div>
+
+        <div class="flex flex-col items-center max-w-20">
+          <img
+            width="80"
+            height="80"
+            ngSrc="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg"
+          />
+          <p>C</p>
         </div>
 
         <div class="flex flex-col items-center max-w-20">
