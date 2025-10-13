@@ -1,5 +1,12 @@
 <div class="lg:mx-auto lg:w-3/4 mt-5 p-3">
-  <h2 class="text-white font-bold text-2xl">Proyectos personales públicos</h2>
+  <h2 class="text-white font-bold text-2xl">{{"projects.title" | translate}}</h2>
+  @if (loading) {
+    <div class="flex justify-between w-full">
+      <app-loading-spinner></app-loading-spinner>
+      <app-loading-spinner></app-loading-spinner>
+      <app-loading-spinner></app-loading-spinner>
+    </div>
+  }
   <div class="mt-2 grid grid-cols-1 sm:grid-cols-2 xl:sm:grid-cols-3 gap-5">
     @for (item of projects; track item; let idx = $index) {
       <div

@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, input, OnInit } from '@angular/core';
 import { BlogDataService, Post } from './blog-data.service';
 import { LucideAngularModule, Rss } from 'lucide-angular';
 import { RouterLink } from '@angular/router';
+import { LoadingSpinnerComponent } from '../loading-spinner/loading-spinner.component';
 
 @Component({
   selector: 'app-blog',
-  imports: [LucideAngularModule, RouterLink],
+  imports: [LucideAngularModule, RouterLink, LoadingSpinnerComponent],
   templateUrl: './blog.component.html',
   styleUrl: './blog.component.css'
 })
 export class BlogComponent implements OnInit {
+  max = input(0);
+  loading = true;
+
   private posts!: Array<Post>;
   private dateText = {
     today: () => "Hoy",
@@ -29,9 +33,13 @@ export class BlogComponent implements OnInit {
 
   setPosts(posts: Array<Post>) {
     this.posts = posts;
+    this.loading = false;
   }
 
   getPosts() {
+    if (this.max() != 0){
+      return this.posts.slice(0, this.max());
+    }
     return this.posts;
   }
 

@@ -1,0 +1,76 @@
+{
+  "app": {
+    "hello": "Test",
+    "title": ""
+  },
+
+  "start": {
+    "speciality": "IT Software Developer",
+    "experience": "4+ Years creating solutions",
+    "button_goto_profile": "Professional Profile",
+    "span_message": "Contact with me",
+    "article_h1": "Latest articles"
+  },
+  "resources": {
+    "title": "Resources"
+  },
+
+  "projects": {
+    "title": "Personal projects"
+  },
+
+  "footer": {
+    "title": "Contact",
+    "copy": "&copy; 2025 All rights reserved"
+  },
+  "portfolio": {
+    "span_1": "This section is limited to displaying information intended for public viewing. Topics such as education, cv, and personal information are only sent privately.",
+    "main": "Hi! I'm Esteban Gonzalez, a backend-specialized developer with a strong full-stack background. I've been implementing solutions professionally since 2022, with a strong focus on excellence and minimalism.<br><br>From the start, I've been a disciplined self-learner, with a rigorous approach to mastering every topic I study. I'm currently a Software Engineering student, which has further broadened my perspective and shaped me into a well-rounded professional. I'm constantly evolving, facing challenges that strengthen my skills and allow me to gain valuable experience.<br><br>My main specialization is server-side development. I manage a broad and current tech stack, with competencies that allow me to design, build, and maintain efficient, secure, and scalable backend systems. However, I don't limit myself to this area: my versatile approach has led me to participate in frontend projects, desktop applications, DevOps, system administration, video game development, bots, and more.<br><br>I understand that programming is a vast universe with common fundamentals, which allows me to quickly adapt to different environments and technologies. I possess solid logic oriented towards solving problems in a structured way and building robust, high-quality solutions.<br><br>Additionally, I actively collaborate on open-source projects and participate in various tech communities, where I share knowledge and learn from other professionals.<br><br>I'm looking for new opportunities where I can continue to grow, contribute my experience and passion, and face new challenges alongside teams that value continuous learning and technical excellence.",
+    "skills_title": "Skills",
+    "skills": {
+      "backend": {
+        "title": "Backend",
+        "items": [
+          "Design and modeling of service-oriented architectures using REST and GraphQL APIs.",
+          "Implementation of scalable architectures: multilayer, microservices, modular monoliths, and hexagonal architecture (ports & adapters).",
+          "Efficient management of concurrency, threads, and processes for high-demand and low-latency environments.",
+          "Development of asynchronous and reactive systems focused on performance and scalability.",
+          "Continuous integration and deployment (CI/CD) through automated pipelines.",
+          "System optimization through strategic caching, bottleneck minimization, and load balancing.",
+          "Advanced database management: SQL, NoSQL, graph, and in-memory storage with Redis.",
+          "Implementation of observability solutions: tracing, structured logging, metrics, and operational analytics.",
+          "Writing clear, precise, and up-to-date technical documentation for APIs and internal components.",
+          "Integration of security mechanisms following current standards (OWASP, JWT, OAuth2)."
+        ]
+      },
+      "systems": {
+        "title": "Systems",
+        "items": [
+          "Proficiency in Unix/Linux environments for development, automation, and advanced administration.",
+          "Virtualization and containerization of applications with tools such as Docker and Podman.",
+          "Infrastructure management and server configuration in self-managed or cloud environments.",
+          "Automation of operational tasks through scripting (Bash, Python) and orchestration tools.",
+          "Performance and low level programming using C language."
+        ]
+      },
+      "software_engineering": {
+        "title": "Software Engineering",
+        "items": [
+          "Application of agile methodologies (Scrum, Kanban) and DevOps practices for efficient iterative cycles.",
+          "Writing clean, testable, and highly maintainable code following SOLID principles and best practices.",
+          "Design and implementation of security controls at the software, infrastructure, and process levels.",
+          "Automation of technical and operational workflows to increase team efficiency.",
+          "Administration, support, and evolution of information systems in production environments."
+        ]
+      },
+      "frontend": {
+        "title": "Frontend and Graphical Interfaces",
+        "items": [
+          "Basic knowledge of UX/UI.",
+          "Proficiency in CSS and libraries such as Tailwind CSS for atomic design.",
+          "Development of scalable and asynchronous graphical interfaces."
+        ]
+      }
+    }
+  }
+}
