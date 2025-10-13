@@ -5,7 +5,7 @@ import { ProfileComponent } from '../home/profile/profile.component';
 
 @Component({
   selector: 'app-portfolio',
-  imports: [ProjectsComponent, ResourcesComponent, ProfileComponent],
+  imports: [ProfileComponent],
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.css'
 })
