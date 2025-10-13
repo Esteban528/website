@@ -1,14 +1,21 @@
 <div class="lg:mx-auto lg:w-3/4 mt-5 p-3 flex justify-between items-center">
   <div>
-    <h1 class="text-white font-bold text-2xl">Esteban Gonzalez</h1>
-    <p class="text-indigo-300/50 font-bold text-xl">Terminal-side enjoyer</p>
-    <p class="text-white mt-5 max-w-xl w-full">
-      4+ Años desarrollando soluciones
-      <span class="text-blue-400 font-bold">Backend escalables</span>.
+    <div class="flex gap-2 items-end">
+      <h1 class="text-white font-bold text-2xl">Esteban Gonzalez</h1>
+      <a
+        href="/portfolio"
+        class="hover:underline hover:text-white/90 text-white/40 px-1 py-0.5 rounded-xl"
+        >{{ "start.button_goto_profile" | translate }}</a
+      >
+    </div>
+
+    <p class="text-indigo-300/50 font-bold text-xl">
+      {{ "start.speciality" | translate }}
     </p>
     <p class="text-white mt-5 max-w-xl w-full">
-      Desarrollador full-stack especializado en java para la creación de
-      aplicaciones de servidor y el desarrollo de sistemas.
+      <span class="text-blue-400 font-bold">
+        {{ "start.span_message" | translate }} </span
+      >
     </p>
     <div class="mt-4 flex flex-wrap gap-2 max-w-xl">
       <a
@@ -110,11 +117,16 @@
       </a>
     </div>
   </div>
-  <img
-    src="/undraw_dev-productivity_5wps.svg"
-    alt="Banner"
-    class="hidden md:flex w-sm lg:w-md"
-  />
+  <img src="" alt="" />
 </div>
-<app-projects></app-projects>
+<div
+  class="lg:mx-auto lg:w-3/4 mt-5 p-3 flex flex-col justify-between"
+>
+  <h1 class="text-white font-bold text-2xl">{{ "start.article_h1" | translate }}</h1>
+  <div class="">
+    <app-blog [max]="3"></app-blog>
+  </div>
+</div>
+
 <app-resources></app-resources>
+<app-projects></app-projects>
