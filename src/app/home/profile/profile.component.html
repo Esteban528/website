@@ -3,463 +3,370 @@
     class="lg:mx-auto w-full p-2 lg:p-6 lg:flex justify-between gap-36 lg:bg-black/30 rounded-lg lg:border lg:border-slate-500/40"
   >
     <div class="flex flex-col gap-5">
-      <h2 class="font-bold text-2xl text-center lg:text-left" id="aboutme">
-        Perfil profesional
-      </h2>
-      <span class="font-light">
-        En esta sección se limita a mostrar información que se desea hacer
-        pública, temas como educación, curriculum e información personal solo se
-        envian por privado.
-      </span>
-      <div class="my-8 flex flex-col justify-around items-center gap-20">
-        <img
-          ngSrc="/profile.webp"
-          alt="foto de perfil"
-          class="w-80 rounded-full"
-          width="320"
-          height="320"
-          priority
-        />
-        <div class="text-gray-300">
-          <p>"Avoiding complexity reduces bugs."</p>
-          <span class="text-xs">Linus Torvalds</span>
-        </div>
-      </div>
-      <div class="flex flex-col gap-5">
-        <p>
-          ¡Hola! Soy Esteban Gonzalez, desarrollador especializado en backend,
-          con una sólida formación como full stack. Llevo implementando
-          soluciones laboralmente desde 2022, con un enfoque alto en la
-          excelencia y el minimalismo.
-        </p>
-        <p>
-          Desde el inicio, he sido un autodidacta disciplinado, con un enfoque
-          riguroso en dominar cada tema que estudio. Actualmente soy estudiante
-          de Ingeniería de Software, lo que ha ampliado aún más mi perspectiva y
-          me ha formado como un profesional integral. Estoy en constante
-          evolución, enfrentando desafíos que fortalecen mis habilidades y me
-          permiten adquirir una experiencia valiosa.
-        </p>
-        <p>
-          Mi principal especialización es el desarrollo del lado del servidor.
-          Manejo un stack tecnológico amplio y actual, con competencias que me
-          permiten diseñar, construir y mantener sistemas backend eficientes,
-          seguros y escalables. Sin embargo, no me limito solo a esta área: mi
-          enfoque versátil me ha llevado a participar en proyectos de frontend,
-          aplicaciones de escritorio, DevOps, administración de sistemas,
-          desarrollo de videojuegos, bots y más.
-        </p>
-        <p>
-          Entiendo que la programación es un universo amplio con fundamentos
-          comunes, lo que me permite adaptarme rápidamente a distintos entornos
-          y tecnologías. Poseo una lógica sólida orientada a resolver problemas
-          de manera estructurada y a construir soluciones robustas y de alta
-          calidad.
-        </p>
-        <p>
-          Además, colaboro activamente en proyectos open source y participo en
-          diversas comunidades tecnológicas, donde comparto conocimiento y
-          aprendo de otros profesionales.
-        </p>
-        <p>
-          Estoy en búsqueda de nuevas oportunidades donde pueda seguir
-          creciendo, aportar mi experiencia y pasión, y afrontar nuevos retos
-          junto a equipos que valoren el aprendizaje continuo y la excelencia
-          técnica.
-        </p>
-      </div>
-      <div>
-        <h3 class="text-2xl font-bold my-3">Habilidades</h3>
+      <div class="flex gap-6 flex-col md:flex-row">
+        <div class="flex flex-col gap-2">
+          <h2
+            class="font-bold text-2xl text-center lg:text-left"
+            id="aboutme"
+          ></h2>
+          <span class="font-light">
+            {{ "portfolio.span_1" | translate }}
+          </span>
+          <div class="my-8 flex flex-col justify-around items-center gap-20">
+            <img
+              ngSrc="/profile.webp"
+              alt="foto de perfil"
+              class="w-80 rounded-full"
+              width="320"
+              height="320"
+              priority
+            />
+            <div class="text-gray-300">
+              <p>"Avoiding complexity reduces bugs."</p>
+              <span class="text-xs">Linus Torvalds</span>
+            </div>
+          </div>
+          <p [innerHTML]="'portfolio.main' | translate"></p>
+          <h3 class="text-2xl font-bold my-3">
+            {{ "portfolio.skills_title" | translate }}
+          </h3>
 
-        <h4 class="text-xl font-bold">Desarrollo Backend</h4>
-        <ul class="flex flex-col gap-1.5">
-          <li class="flex gap-1">
-            <lucide-angular [img]="Dot" class="text-blue-500"></lucide-angular>
-            Diseño y modelado de arquitecturas orientadas a servicios utilizando
-            API REST y GraphQL.
-          </li>
-          <li class="flex gap-1">
-            <lucide-angular [img]="Dot" class="text-blue-500"></lucide-angular>
-            Implementación de arquitecturas escalables: multicapa,
-            microservicios, monolitos modulares y arquitectura hexagonal (ports
-            & adapters).
-          </li>
-          <li class="flex gap-1">
-            <lucide-angular [img]="Dot" class="text-blue-500"></lucide-angular>
-            Gestión eficiente de concurrencia, hilos y procesos para entornos de
-            alta demanda y baja latencia.
-          </li>
-          <li class="flex gap-1">
-            <lucide-angular [img]="Dot" class="text-blue-500"></lucide-angular>
-            Desarrollo de sistemas asincrónicos y reactivamente orientados al
-            rendimiento y la escalabilidad.
-          </li>
-          <li class="flex gap-1">
-            <lucide-angular [img]="Dot" class="text-blue-500"></lucide-angular>
-            Integración y despliegue continuo (CI/CD) mediante pipelines
-            automatizados.
-          </li>
-          <li class="flex gap-1">
-            <lucide-angular [img]="Dot" class="text-blue-500"></lucide-angular>
-            Optimización de sistemas mediante caching estratégico, minimización
-            de cuellos de botella y balanceo de carga.
-          </li>
-          <li class="flex gap-1">
-            <lucide-angular [img]="Dot" class="text-blue-500"></lucide-angular>
-            Manejo avanzado de bases de datos: SQL, NoSQL, grafos y
-            almacenamiento en memoria con Redis.
-          </li>
-          <li class="flex gap-1">
-            <lucide-angular [img]="Dot" class="text-blue-500"></lucide-angular>
-            Implementación de soluciones de observabilidad: trazas, logs
-            estructurados, métricas y analítica operativa.
-          </li>
-          <li class="flex gap-1">
-            <lucide-angular [img]="Dot" class="text-blue-500"></lucide-angular>
-            Redacción de documentación técnica clara, precisa y actualizada para
-            APIs y componentes internos.
-          </li>
-          <li class="flex gap-1">
-            <lucide-angular [img]="Dot" class="text-blue-500"></lucide-angular>
-            Integración de mecanismos de seguridad conforme a estándares
-            actuales (OWASP, JWT, OAuth2).
-          </li>
-        </ul>
+          <h4 class="font-bold text-white mt-2">
+            {{ "portfolio.skills.backend.title" | translate }}
+          </h4>
+          <ul class="flex flex-col gap-1.5">
+            @for (
+              item of "portfolio.skills.backend.items" | translate;
+              track item
+            ) {
+              <li class="flex gap-1">
+                <lucide-angular
+                  [img]="Dot"
+                  class="text-blue-500"
+                ></lucide-angular>
+                {{ item }}
+              </li>
+            }
+          </ul>
 
-        <h4 class="text-xl font-bold mt-5">Sistemas</h4>
-        <ul class="flex flex-col gap-1.5">
-          <li class="flex gap-1">
-            <lucide-angular [img]="Dot" class="text-blue-500"></lucide-angular>
-            Dominio de entornos Unix/Linux para desarrollo, automatización y
-            administración avanzada.
-          </li>
-          <li class="flex gap-1">
-            <lucide-angular [img]="Dot" class="text-blue-500"></lucide-angular>
-            Virtualización y contenerización de aplicaciones con herramientas
-            como Docker y Podman.
-          </li>
-          <li class="flex gap-1">
-            <lucide-angular [img]="Dot" class="text-blue-500"></lucide-angular>
-            Gestión de infraestructura y configuración de servidores en entornos
-            autogestionados o cloud.
-          </li>
-          <li class="flex gap-1">
-            <lucide-angular [img]="Dot" class="text-blue-500"></lucide-angular>
-            Automatización de tareas operativas mediante scripting (Bash,
-            Python) y herramientas de orquestación.
-          </li>
-        </ul>
+          <h4 class="font-bold text-white mt-2">
+            {{ "portfolio.skills.systems.title" | translate }}
+          </h4>
+          <ul class="flex flex-col gap-1.5">
+            @for (
+              item of "portfolio.skills.systems.items" | translate;
+              track item
+            ) {
+              <li class="flex gap-1">
+                <lucide-angular
+                  [img]="Dot"
+                  class="text-blue-500"
+                ></lucide-angular>
+                {{ item }}
+              </li>
+            }
+          </ul>
 
-        <h4 class="text-xl font-bold mt-5">Ingeniería de Software</h4>
-        <ul class="flex flex-col gap-1.5">
-          <li class="flex gap-1">
-            <lucide-angular [img]="Dot" class="text-blue-500"></lucide-angular>
-            Aplicación de metodologías ágiles (Scrum, Kanban) y enfoque DevOps
-            para ciclos iterativos eficientes.
-          </li>
-          <li class="flex gap-1">
-            <lucide-angular [img]="Dot" class="text-blue-500"></lucide-angular>
-            Escritura de código limpio, testeable y altamente mantenible
-            siguiendo principios SOLID y buenas prácticas.
-          </li>
-          <li class="flex gap-1">
-            <lucide-angular [img]="Dot" class="text-blue-500"></lucide-angular>
-            Diseño e implementación de controles de seguridad a nivel de
-            software, infraestructura y procesos.
-          </li>
-          <li class="flex gap-1">
-            <lucide-angular [img]="Dot" class="text-blue-500"></lucide-angular>
-            Automatización de flujos de trabajo técnicos y operativos para
-            aumentar la eficiencia del equipo.
-          </li>
-          <li class="flex gap-1">
-            <lucide-angular [img]="Dot" class="text-blue-500"></lucide-angular>
-            Administración, soporte y evolución de sistemas de información en
-            entornos productivos.
-          </li>
-        </ul>
+          <h4 class="font-bold text-white mt-2">
+            {{ "portfolio.skills.software_engineering.title" | translate }}
+          </h4>
+          <ul class="flex flex-col gap-1.5">
+            @for (
+              item of "portfolio.skills.software_engineering.items" | translate;
+              track item
+            ) {
+              <li class="flex gap-1">
+                <lucide-angular
+                  [img]="Dot"
+                  class="text-blue-500"
+                ></lucide-angular>
+                {{ item }}
+              </li>
+            }
+          </ul>
 
-        <h4 class="text-xl font-bold mt-5">
-          Desarrollo frontend e interfaces gráficas
-        </h4>
-        <ul class="flex flex-col gap-1.5">
-          <li class="flex gap-1">
-            <lucide-angular [img]="Dot" class="text-blue-500"></lucide-angular>
-            Conocimientos básicos de UX/UI.
-          </li>
-          <li class="flex gap-1">
-            <lucide-angular [img]="Dot" class="text-blue-500"></lucide-angular>
-            Dominio de CSS y librerias como tailwind css para atomic design.
-          </li>
-          <li class="flex gap-1">
-            <lucide-angular [img]="Dot" class="text-blue-500"></lucide-angular>
-            Desarrollo de interfaces gráficas escalables y asincrónicas.
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="w-full min-w-80">
-      <div
-        class="hidden md:block 2xl:hidden mt-10 mb-20 rounded-lg p-4 font-serif text-2xl text-gray-100/60 -rotate-5 shadow shadow-black/50"
-      ></div>
-      <h2 class="font-bold text-2xl mt-8">Tecnologías con mayor experiencia</h2>
-      <h3 class="font-bold mb-5">Lenguajes de programación</h3>
-      <div class="grid grid-cols-3">
-        <div class="flex flex-col items-center max-w-20">
-          <img
-            class=""
-            width="80"
-            height="80"
-            ngSrc="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
-          />
-          <p>Java</p>
-        </div>
-        <div class="flex flex-col items-center max-w-20">
-          <img
-            width="80"
-            height="80"
-            ngSrc="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
-          />
-          <p>Typescript</p>
+          <h4 class="font-bold text-white mt-2">
+            {{ "portfolio.skills.frontend.title" | translate }}
+          </h4>
+          <ul class="flex flex-col gap-1.5">
+            @for (
+              item of "portfolio.skills.frontend.items" | translate;
+              track item
+            ) {
+              <li class="flex gap-1">
+                <lucide-angular
+                  [img]="Dot"
+                  class="text-blue-500"
+                ></lucide-angular>
+                {{ item }}
+              </li>
+            }
+          </ul>
         </div>
 
-        <div class="flex flex-col items-center max-w-20">
-          <img
-            width="80"
-            height="80"
-            ngSrc="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
-          />
-          <p>Javascript</p>
-        </div>
+        <div class="w-full min-w-80">
+          <h2 class="font-bold text-2xl mt-8">
+            Tecnologías con mayor experiencia
+          </h2>
+          <h3 class="font-bold mb-5">Lenguajes de programación</h3>
+          <div class="grid grid-cols-3">
+            <div class="flex flex-col items-center max-w-20">
+              <img
+                class=""
+                width="80"
+                height="80"
+                ngSrc="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
+              />
+              <p>Java</p>
+            </div>
+            <div class="flex flex-col items-center max-w-20">
+              <img
+                width="80"
+                height="80"
+                ngSrc="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+              />
+              <p>Typescript</p>
+            </div>
 
-        <div class="flex flex-col items-center max-w-20">
-          <img
-            width="80"
-            height="80"
-            ngSrc="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg"
-          />
-          <p>C</p>
-        </div>
+            <div class="flex flex-col items-center max-w-20">
+              <img
+                width="80"
+                height="80"
+                ngSrc="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+              />
+              <p>Javascript</p>
+            </div>
 
-        <div class="flex flex-col items-center max-w-20">
-          <img
-            width="80"
-            height="80"
-            ngSrc="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg"
-          />
-          <p>PHP</p>
-        </div>
+            <div class="flex flex-col items-center max-w-20">
+              <img
+                width="80"
+                height="80"
+                ngSrc="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg"
+              />
+              <p>C</p>
+            </div>
 
-        <div class="flex flex-col items-center max-w-20">
-          <img
-            width="80"
-            height="80"
-            ngSrc="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
-          />
-          <p>Python</p>
-        </div>
+            <div class="flex flex-col items-center max-w-20">
+              <img
+                width="80"
+                height="80"
+                ngSrc="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg"
+              />
+              <p>PHP</p>
+            </div>
 
-        <div class="flex flex-col items-center max-w-20">
-          <img
-            width="80"
-            height="80"
-            ngSrc="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/lua/lua-original.svg"
-          />
-          <p>Lua</p>
-        </div>
-      </div>
+            <div class="flex flex-col items-center max-w-20">
+              <img
+                width="80"
+                height="80"
+                ngSrc="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+              />
+              <p>Python</p>
+            </div>
 
-      <h3 class="font-bold mt-8 mb-6">Frameworks y ecosistemas</h3>
-      <div class="grid grid-cols-3">
-        <div class="flex flex-col items-center max-w-20">
-          <img
-            width="80"
-            height="80"
-            ngSrc="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg"
-          />
-          <p>Ecosistema spring</p>
-        </div>
+            <div class="flex flex-col items-center max-w-20">
+              <img
+                width="80"
+                height="80"
+                ngSrc="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/lua/lua-original.svg"
+              />
+              <p>Lua</p>
+            </div>
+          </div>
 
-        <div class="flex flex-col items-center max-w-20">
-          <img
-            width="80"
-            height="80"
-            ngSrc="https://www.pinclipart.com/picdir/big/519-5197103_jakarta-ee-logo-jakarta-ee-clipart.png"
-          />
-          <p>Jakarta</p>
-        </div>
+          <h3 class="font-bold mt-8 mb-6">Frameworks y ecosistemas</h3>
+          <div class="grid grid-cols-3">
+            <div class="flex flex-col items-center max-w-20">
+              <img
+                width="80"
+                height="80"
+                ngSrc="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg"
+              />
+              <p>Ecosistema spring</p>
+            </div>
 
-        <div class="flex flex-col items-center max-w-20">
-          <img
-            width="80"
-            height="80"
-            ngSrc="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/junit/junit-original.svg"
-          />
-          <p>J Unit 5</p>
-        </div>
+            <div class="flex flex-col items-center max-w-20">
+              <img
+                width="80"
+                height="80"
+                ngSrc="https://www.pinclipart.com/picdir/big/519-5197103_jakarta-ee-logo-jakarta-ee-clipart.png"
+              />
+              <p>Jakarta</p>
+            </div>
 
-        <div class="flex flex-col items-center max-w-20">
-          <img
-            width="80"
-            height="80"
-            ngSrc="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/hibernate/hibernate-original.svg"
-          />
-          <p>JPA Hibernate</p>
-        </div>
+            <div class="flex flex-col items-center max-w-20">
+              <img
+                width="80"
+                height="80"
+                ngSrc="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/junit/junit-original.svg"
+              />
+              <p>J Unit 5</p>
+            </div>
 
-        <div class="flex flex-col items-center max-w-20">
-          <img
-            width="80"
-            height="80"
-            ngSrc="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"
-          />
-          <p>Node JS</p>
-        </div>
+            <div class="flex flex-col items-center max-w-20">
+              <img
+                width="80"
+                height="80"
+                ngSrc="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/hibernate/hibernate-original.svg"
+              />
+              <p>JPA Hibernate</p>
+            </div>
 
-        <div class="flex flex-col items-center max-w-20">
-          <img
-            width="80"
-            height="80"
-            ngSrc="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg"
-          />
-          <p>Angular</p>
-        </div>
+            <div class="flex flex-col items-center max-w-20">
+              <img
+                width="80"
+                height="80"
+                ngSrc="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"
+              />
+              <p>Node JS</p>
+            </div>
 
-        <div class="flex flex-col items-center max-w-20">
-          <img
-            width="80"
-            height="80"
-            ngSrc="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg"
-          />
-          <p>Azure</p>
-        </div>
+            <div class="flex flex-col items-center max-w-20">
+              <img
+                width="80"
+                height="80"
+                ngSrc="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg"
+              />
+              <p>Angular</p>
+            </div>
 
-        <div class="flex flex-col items-center max-w-20">
-          <img
-            width="80"
-            height="80"
-            ngSrc="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg"
-          />
-          <p>PostgreSQL</p>
-        </div>
+            <div class="flex flex-col items-center max-w-20">
+              <img
+                width="80"
+                height="80"
+                ngSrc="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg"
+              />
+              <p>Azure</p>
+            </div>
 
-        <div class="flex flex-col items-center max-w-20">
-          <img
-            width="80"
-            height="80"
-            ngSrc="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"
-          />
-          <p>MySQL</p>
-        </div>
+            <div class="flex flex-col items-center max-w-20">
+              <img
+                width="80"
+                height="80"
+                ngSrc="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg"
+              />
+              <p>PostgreSQL</p>
+            </div>
 
-        <div class="flex flex-col items-center max-w-20">
-          <img
-            width="80"
-            height="80"
-            ngSrc="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mariadb/mariadb-original.svg"
-          />
-          <p>MariaDB</p>
-        </div>
+            <div class="flex flex-col items-center max-w-20">
+              <img
+                width="80"
+                height="80"
+                ngSrc="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"
+              />
+              <p>MySQL</p>
+            </div>
 
-        <div class="flex flex-col items-center max-w-20">
-          <img
-            width="80"
-            height="80"
-            ngSrc="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg"
-          />
-          <p>Redis</p>
-        </div>
-        <div class="flex flex-col items-center max-w-20">
-          <img
-            width="80"
-            height="80"
-            ngSrc="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg"
-          />
-          <p>Mongodb</p>
-        </div>
-      </div>
+            <div class="flex flex-col items-center max-w-20">
+              <img
+                width="80"
+                height="80"
+                ngSrc="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mariadb/mariadb-original.svg"
+              />
+              <p>MariaDB</p>
+            </div>
 
-      <h3 class="font-bold my-5">Herramientas y entornos</h3>
-      <div class="grid grid-cols-3">
-        <div class="flex flex-col items-center max-w-20">
-          <img
-            width="80"
-            height="80"
-            ngSrc="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
-          />
-          <p>Git</p>
-        </div>
-        <div class="flex flex-col items-center max-w-20">
-          <img
-            width="80"
-            height="80"
-            ngSrc="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/maven/maven-original.svg"
-          />
-          <p>Maven</p>
-        </div>
+            <div class="flex flex-col items-center max-w-20">
+              <img
+                width="80"
+                height="80"
+                ngSrc="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg"
+              />
+              <p>Redis</p>
+            </div>
+            <div class="flex flex-col items-center max-w-20">
+              <img
+                width="80"
+                height="80"
+                ngSrc="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg"
+              />
+              <p>Mongodb</p>
+            </div>
+          </div>
 
-        <div class="flex flex-col items-center max-w-20">
-          <img
-            width="80"
-            height="80"
-            ngSrc="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gradle/gradle-original.svg"
-          />
-          <p>Gradle</p>
-        </div>
+          <h3 class="font-bold my-5">Herramientas y entornos</h3>
+          <div class="grid grid-cols-3">
+            <div class="flex flex-col items-center max-w-20">
+              <img
+                width="80"
+                height="80"
+                ngSrc="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+              />
+              <p>Git</p>
+            </div>
+            <div class="flex flex-col items-center max-w-20">
+              <img
+                width="80"
+                height="80"
+                ngSrc="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/maven/maven-original.svg"
+              />
+              <p>Maven</p>
+            </div>
 
-        <div class="flex flex-col items-center max-w-20">
-          <img
-            width="80"
-            height="80"
-            ngSrc="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg"
-          />
-          <p>Bash</p>
-        </div>
+            <div class="flex flex-col items-center max-w-20">
+              <img
+                width="80"
+                height="80"
+                ngSrc="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gradle/gradle-original.svg"
+              />
+              <p>Gradle</p>
+            </div>
 
-        <div class="flex flex-col items-center max-w-20">
-          <img
-            width="80"
-            height="80"
-            ngSrc="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg"
-          />
-          <p>Linux</p>
-        </div>
+            <div class="flex flex-col items-center max-w-20">
+              <img
+                width="80"
+                height="80"
+                ngSrc="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg"
+              />
+              <p>Bash</p>
+            </div>
 
-        <div class="flex flex-col items-center max-w-20">
-          <img
-            width="80"
-            height="80"
-            ngSrc="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nixos/nixos-original.svg"
-          />
-          <p>Nixos</p>
-        </div>
+            <div class="flex flex-col items-center max-w-20">
+              <img
+                width="80"
+                height="80"
+                ngSrc="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg"
+              />
+              <p>Linux</p>
+            </div>
 
-        <div class="flex flex-col items-center max-w-20">
-          <img
-            width="80"
-            height="80"
-            ngSrc="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg"
-          />
-          <p>Docker</p>
-        </div>
+            <div class="flex flex-col items-center max-w-20">
+              <img
+                width="80"
+                height="80"
+                ngSrc="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nixos/nixos-original.svg"
+              />
+              <p>Nixos</p>
+            </div>
 
-        <div class="flex flex-col items-center max-w-20">
-          <img
-            class="h-20"
-            width="80"
-            height="24"
-            ngSrc="https://curl.se/logo/curl-logo.svg"
-          />
-          <p>cURL</p>
-        </div>
+            <div class="flex flex-col items-center max-w-20">
+              <img
+                width="80"
+                height="80"
+                ngSrc="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg"
+              />
+              <p>Docker</p>
+            </div>
 
-        <div class="flex flex-col items-center max-w-20">
-          <img
-            width="80"
-            height="80"
-            ngSrc="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/swagger/swagger-original.svg"
-          />
-          <p>Swagger/OpenAPI</p>
+            <div class="flex flex-col items-center max-w-20">
+              <img
+                class="h-20"
+                width="80"
+                height="24"
+                ngSrc="https://curl.se/logo/curl-logo.svg"
+              />
+              <p>cURL</p>
+            </div>
+
+            <div class="flex flex-col items-center max-w-20">
+              <img
+                width="80"
+                height="80"
+                ngSrc="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/swagger/swagger-original.svg"
+              />
+              <p>Swagger/OpenAPI</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
