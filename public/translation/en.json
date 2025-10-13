@@ -72,5 +72,8 @@
         ]
       }
     }
+  },
+  "blog": {
+    "title": "All posts"
   }
 }
