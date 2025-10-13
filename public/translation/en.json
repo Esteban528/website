@@ -1,0 +1,26 @@
+{
+  "app": {
+    "hello": "Test",
+    "title": ""
+  },
+
+  "start": {
+    "speciality": "IT Software Developer",
+    "experience": "4+ Years creating solutions",
+    "button_goto_profile": "Professional Profile",
+    "span_message" : "Contact with me",
+    "article_h1" : "Latest articles"
+  },
+  "resources" : {
+    "title": "Resources"
+  },
+
+  "projects" : {
+    "title": "Personal projects"
+  },
+
+  "footer" : {
+    "title": "Contact",
+    "copy": "&copy; 2025 All rights reserved"
+  }
+}
