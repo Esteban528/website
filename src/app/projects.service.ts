@@ -20,19 +20,17 @@ export class ProjectsService {
   }
 
   loadResources(func: (projects: Resource[]) => void) {
-    this.http.get<Project[]>(environment.resourcesUrl).subscribe(func);
+    this.http.get<Resource[]>(environment.resourcesUrl).subscribe(func);
   }
 }
 
 export type Project = {
   title: string;
-  short_description: string;
   description: string;
-  stack: Array<String>;
-  link: string;
-  source_code: string;
-  image_url: string;
+  visit_url: string;
+  source_url: string;
   youtube_url: string;
+  image_url: string
 }
 
 export type Resource = {

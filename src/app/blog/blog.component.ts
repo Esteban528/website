@@ -14,7 +14,8 @@ export class BlogComponent implements OnInit {
   max = input(0);
   loading = true;
 
-  private posts!: Array<Post>;
+  private posts: Array<Post> = [];
+
   private dateText = {
     today: () => "Hoy",
     yesterday: () => "Ayer",

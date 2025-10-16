@@ -27,17 +27,8 @@
 
         <a routerLink="/project/{{idx}}" class="text-white font-bold text-2xl mt-2 hover:underline">{{ item.title }}</a>
         <p class="text-white/70">
-          {{ item.short_description }}
+          {{ item.description | slice:0:150 }}
         </p>
-        <div class="flex flex-wrap gap-x-5 overflow-hidden">
-          @for (tech of item.stack; track tech) {
-            <div
-              class="bg-linear-to-tr from-blue-200/30 to-indigo-200/30 px-2 rounded-xl text-white border border-indigo-200/10 shadow my-2 h-fit"
-            >
-              {{ tech }}
-            </div>
-          }
-        </div>
       </div>
     }
   </div>

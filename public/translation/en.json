@@ -1,7 +1,8 @@
 {
   "app": {
     "hello": "Test",
-    "title": ""
+    "title": "",
+    "comeback_home": "Come back to home"
   },
 
   "start": {
@@ -74,6 +75,7 @@
     }
   },
   "blog": {
-    "title": "All posts"
+    "title": "All posts",
+    "all_post": "All posts"
   }
 }
