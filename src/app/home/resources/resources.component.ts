@@ -10,10 +10,10 @@ import { LoadingSpinnerComponent } from '../../loading-spinner/loading-spinner.c
   templateUrl: './resources.component.html',
   styleUrl: './resources.component.css'
 })
-export class ResourcesComponent implements OnInit{
-  resources!:Array<Resource>;
+export class ResourcesComponent implements OnInit {
+  resources!: Array<Resource>;
   loading = true;
-  constructor(private service:ProjectsService) {
+  constructor(private service: ProjectsService) {
 
   }
 
@@ -21,9 +21,8 @@ export class ResourcesComponent implements OnInit{
     this.service.loadResources(resources => this.setResources(resources));
   }
 
-  setResources(resources:Array<Resource>) {
+  setResources(resources: Array<Resource>) {
     this.resources = resources;
     this.loading = false;
   }
-
 }
