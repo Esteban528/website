@@ -16,7 +16,8 @@
           class="text-red-500"
         ></lucide-angular>
         <p class="font-semibold">{{item.title}}</p>
-        <p class="ml-3 text-white/60">{{getDaysMessage(item.date)}}</p>
+        <p class="ml-3 text-white/60">{{util.getDaysMessage(item.date)}}</p>
+        <p class="ml-3 text-white/60">- {{item.author}}</p>
       </div>
       <p class="text-white/80">{{item.description}}</p>
     </a>

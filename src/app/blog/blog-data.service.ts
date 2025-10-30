@@ -22,9 +22,10 @@ export class BlogDataService {
 }
 
 export type Post = {
-  id: number,
-  title: string,
-  date: string,
-  content: string,
-  description: string
-}
+  id?: number,
+  author?: string,
+  title?: string,
+  description?: string,
+  content?: string,
+  date?: string,
+};

@@ -6,14 +6,9 @@
         class="text-white bg-slate-400/40 hover:bg-slate-600/40 w-max py-1 px-2 rounded-lg flex gap-2 border border-gray-900/60 shadow shadow-gray-900/20"
       >
         {{"blog.all_post" | translate}} </a
-      >/
-      <h1 class="font-black">{{ post.title }}</h1>
+      >
     </div>
 
-    <div
-      class="prose prose-sm sm:prose lg:prose-lg xl:prose-xl dark:prose-invert"
-    >
-      <markdown>{{ post.content }}</markdown>
-    </div>
+    <render-post [post]="post"></render-post>
   }
 </div>

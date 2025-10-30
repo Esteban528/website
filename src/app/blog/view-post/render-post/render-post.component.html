@@ -1,0 +1,8 @@
+<div class="text-white w-full ">
+<h2 class="font-black text-3xl" [textContent]="getPost().title"></h2>
+<p class="" [textContent]="util.getDaysMessage(getPost().date)"></p>
+<p class="text-white/60" [textContent]="'By ' + getPost().author"></p>
+<div class="pt-2 border-t border-t-slate-600/40 mt-5 prose prose-sm sm:prose lg:prose-lg xl:prose-xl dark:prose-invert">
+<markdown  [data]="getPost().content"></markdown>
+</div>
+</div>

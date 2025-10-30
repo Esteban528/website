@@ -3,10 +3,11 @@ import { BlogDataService, Post } from '../blog-data.service';
 import { Router, RouterLink } from '@angular/router';
 import { MarkdownModule } from 'ngx-markdown';
 import { TranslatePipe } from '@ngx-translate/core';
+import { RenderPostComponent } from './render-post/render-post.component';
 
 @Component({
   selector: 'app-view-post',
-  imports: [RouterLink, MarkdownModule, TranslatePipe],
+  imports: [RouterLink, MarkdownModule, TranslatePipe, RenderPostComponent],
   templateUrl: './view-post.component.html',
   styleUrl: './view-post.component.css',
 })
