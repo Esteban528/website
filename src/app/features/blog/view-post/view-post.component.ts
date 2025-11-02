@@ -1,0 +1,34 @@
+import { Component, Input } from '@angular/core';
+import { Router, RouterLink } from '@angular/router';
+import { MarkdownModule } from 'ngx-markdown';
+import { TranslatePipe } from '@ngx-translate/core';
+import { RenderPostComponent } from './render-post/render-post.component';
+import { Post } from '../../../core/api.service';
+import { BlogDataService } from '../../../core/blog-data.service';
+
+@Component({
+  selector: 'app-view-post',
+  imports: [RouterLink, MarkdownModule, TranslatePipe, RenderPostComponent],
+  templateUrl: './view-post.component.html',
+})
+export class ViewPostComponent {
+  post!: Post;
+
+  constructor(private service: BlogDataService, private router:Router) {
+
+  }
+
+  @Input()
+  set id(id: number) {
+    this.service.loadPost(id, (p) => {
+      if (p)
+        this.setPost(p)
+      else
+      this.router.navigate(['/blog']);
+    })
+  }
+
+  setPost(post: Post) {
+    this.post = post;
+  }
+}
