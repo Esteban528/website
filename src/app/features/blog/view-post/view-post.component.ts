@@ -1,9 +1,10 @@
 import { Component, Input } from '@angular/core';
-import { BlogDataService, Post } from '../blog-data.service';
 import { Router, RouterLink } from '@angular/router';
 import { MarkdownModule } from 'ngx-markdown';
 import { TranslatePipe } from '@ngx-translate/core';
 import { RenderPostComponent } from './render-post/render-post.component';
+import { Post } from '../../../core/api.service';
+import { BlogDataService } from '../../../core/blog-data.service';
 
 @Component({
   selector: 'app-view-post',

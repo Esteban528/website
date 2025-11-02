@@ -2,7 +2,8 @@ import { Component, Input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { YoutubePlayerComponent } from './youtube-player/youtube-player.componen';
 import { TranslatePipe } from '@ngx-translate/core';
-import { Project, ProjectsService } from '../../../core/projects.service';
+import { ProjectsService } from '../../../core/projects.service';
+import { Project } from '../../../core/api.service';
 
 @Component({
   selector: 'app-project-view',

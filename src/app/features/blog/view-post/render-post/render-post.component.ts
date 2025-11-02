@@ -1,7 +1,7 @@
 import { Component, input, OnInit } from '@angular/core';
 import { MarkdownModule } from 'ngx-markdown';
-import { Post } from '../../blog-data.service';
 import { UtilsService } from '../../../../core/utils.service';
+import { Post } from '../../../../core/api.service';
 
 @Component({
   selector: 'render-post',

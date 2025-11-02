@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { SidebarComponent } from "../sidebar/sidebar.component";
-import { BlogDataService, Post } from '../../blog/blog-data.service';
 import { FormsModule } from '@angular/forms';
 import { MarkdownModule } from 'ngx-markdown';
 import { RenderPostComponent } from '../../blog/view-post/render-post/render-post.component';
 import { LoadingSpinnerComponent } from '../../../shared/loading-spinner/loading-spinner.component';
 import { UtilsService } from '../../../core/utils.service';
 import { environment } from '../../../../environments/environment';
-import { ApiRequest, ApiService } from '../../../core/api.service';
+import { ApiRequest, ApiService, Post } from '../../../core/api.service';
+import { BlogDataService } from '../../../core/blog-data.service';
 
 @Component({
   selector: 'app-adminblog',
@@ -52,7 +52,7 @@ export class AdminblogComponent implements OnInit {
     if (!this.editPost)
       return;
 
-    const request: ApiRequest = {
+    const request: ApiRequest<Object> = {
       url: environment.postsUrl,
       method: 'put',
       content: this.editPost,
@@ -75,7 +75,7 @@ export class AdminblogComponent implements OnInit {
   }
 
   delete(id: number) {
-    const request: ApiRequest = {
+    const request: ApiRequest<Object> = {
       url: `${environment.postsUrl}/${id}`,
       method: 'delete',
       user: this.user,
@@ -127,7 +127,7 @@ export class AdminblogComponent implements OnInit {
       return
     }
 
-    const request: ApiRequest = {
+    const request: ApiRequest<Object> = {
       url: `${environment.postsUrl}`,
       method: 'post',
       content: this.editPost,

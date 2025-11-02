@@ -2,8 +2,9 @@ import { Component, OnInit, Pipe } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
-import { Project, ProjectsService } from '../../core/projects.service';
 import { LoadingSpinnerComponent } from '../../shared/loading-spinner/loading-spinner.component';
+import { Project } from '../../core/api.service';
+import { ProjectsService } from '../../core/projects.service';
 
 @Component({
   selector: 'app-projects',

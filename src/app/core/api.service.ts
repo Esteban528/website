@@ -15,7 +15,7 @@ export class ApiService {
     return new HttpHeaders().set('Authorization', `Basic ${token}`);
   }
 
-  call(request: ApiRequest) {
+  call(request: ApiRequest<any>) {
     const options = {
       headers: {}
     };
@@ -52,12 +52,37 @@ export class ApiService {
   }
 }
 
-export type ApiRequest = {
+export type ApiRequest <T extends Object> = {
   url: string;
   method: 'get' | 'post' | 'put' | 'delete';
   content?: any;
   user?: string;
   password?: string;
-  on_respond: (res:Object)=>void,
+  on_respond: (res:T)=>void,
   on_error: (res:Object)=>void
+}
+
+export type Post = {
+  id?: number,
+  author?: string,
+  title?: string,
+  description?: string,
+  content?: string,
+  date?: string,
+};
+
+export type Project = {
+  title: string;
+  description: string;
+  visit_url: string;
+  source_url: string;
+  youtube_url: string;
+  image_url: string
+}
+
+export type Resource = {
+  title: string;
+  description: string;
+  link: string;
+  image_url: string;
 }

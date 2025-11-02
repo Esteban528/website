@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
 import { LoadingSpinnerComponent } from '../../shared/loading-spinner/loading-spinner.component';
-import { ProjectsService, type Resource } from '../../core/projects.service';
+import { ProjectsService } from '../../core/projects.service';
+import { Resource } from '../../core/api.service';
 
 @Component({
   selector: 'app-resources',

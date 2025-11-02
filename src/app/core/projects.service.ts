@@ -1,17 +1,26 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment.development';
+import { ApiRequest, ApiService, Project, Resource } from './api.service';
 
-// TODO: REWRITE THIS
 @Injectable({
   providedIn: 'root'
 })
 export class ProjectsService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private api: ApiService) { }
 
   loadProjects(func: (projects: Project[]) => void) {
-    this.http.get<Project[]>(environment.projectsUrl).subscribe(func);
+    const request: ApiRequest<Project[]> = {
+      url: environment.projectsUrl,
+      method: 'get',
+      on_respond: (res) => {
+        func(res)
+      },
+      on_error(res) {},
+    }
+
+    this.api.call(request);
   }
 
   loadProject(index: number, func: (project: Project) => void) {
@@ -21,22 +30,16 @@ export class ProjectsService {
   }
 
   loadResources(func: (projects: Resource[]) => void) {
-    this.http.get<Resource[]>(environment.resourcesUrl).subscribe(func);
+    const request: ApiRequest<Resource[]> = {
+      url: environment.resourcesUrl,
+      method: 'get',
+      on_respond: (res) => {
+        func(res)
+      },
+      on_error(res) {},
+    }
+
+    this.api.call(request);
   }
 }
 
-export type Project = {
-  title: string;
-  description: string;
-  visit_url: string;
-  source_url: string;
-  youtube_url: string;
-  image_url: string
-}
-
-export type Resource = {
-  title: string;
-  description: string;
-  link: string;
-  image_url: string;
-}

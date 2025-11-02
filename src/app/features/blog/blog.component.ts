@@ -1,9 +1,10 @@
 import { Component, input, OnInit } from '@angular/core';
-import { BlogDataService, Post } from './blog-data.service';
 import { LucideAngularModule, Rss } from 'lucide-angular';
 import { RouterLink } from '@angular/router';
 import { LoadingSpinnerComponent } from '../../shared/loading-spinner/loading-spinner.component';
 import { UtilsService } from '../../core/utils.service';
+import { Post } from '../../core/api.service';
+import { BlogDataService } from '../../core/blog-data.service';
 
 @Component({
   selector: 'app-blog',
