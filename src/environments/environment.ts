@@ -1,5 +1,5 @@
 export const environment = {
-  projectsUrl : 'https://portfolio.api.estebandev.xyz/projects',
-  resourcesUrl : 'https://portfolio.api.estebandev.xyz/resources',
-  postsUrl : 'https://portfolio.api.estebandev.xyz/posts',
+  projectsUrl : 'https://api.estebandev.xyz/projects',
+  resourcesUrl : 'https://api.estebandev.xyz/resources',
+  postsUrl : 'https://api.estebandev.xyz/posts',
 };
