@@ -1,5 +1,5 @@
 export const environment = {
-  projectsUrl : '/projects.json',
-  resourcesUrl : '/resources.json',
+  projectsUrl : 'http://localhost:8080/projects',
+  resourcesUrl : 'http://localhost:8080/resources',
   postsUrl : 'http://localhost:8080/post',
 };
