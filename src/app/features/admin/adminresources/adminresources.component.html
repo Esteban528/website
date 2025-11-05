@@ -1,7 +1,144 @@
-<div class="grid grid-cols-3">
-<app-sidebar></app-sidebar>
-<div class="text-white">
-  <h1 class="text-4xl">RESOURCES WORKS</h1>
-</div>
-<div></div>
+<div class="flex justify-start gap-5">
+  <app-sidebar class=""></app-sidebar>
+  @if(loading){
+    <app-loading-spinner></app-loading-spinner>
+  }
+  @else{
+    <div class="text-white mt-5 w-full">
+      <div class="flex gap-2 mb-5">
+        <div class="flex flex-col">
+          <label for="user">User</label>
+          <input [(ngModel)]="user" class="p-1 bg-slate-600/30 border border-slate-300/30 rounded-lg w-max" type="text" name="user">
+        </div>
+        <div class="flex flex-col">
+          <label for="password">Password</label>
+          <input [(ngModel)]="password" class="p-1 bg-slate-600/30 border border-slate-300/30 rounded-lg w-max" type="password" name="password">
+        </div>
+
+        <div class="flex flex-col justify-end">
+        @if (!creating){
+          <button
+            class="text-sm px-3 py-2 rounded-md bg-green-600 text-white hover:bg-green-700 hover:cursor-pointer"
+            (click)="toggleCreatePanel()"
+          >
+            Create
+          </button>
+        }@else {
+          <button
+            class="text-sm px-3 py-2 rounded-md bg-red-600 text-white hover:bg-red-700 hover:cursor-pointer"
+            (click)="toggleCreatePanel()"
+          >
+            Cancel
+          </button>
+        }
+        </div>
+      </div>
+
+      @if (creating && editResource != null) {
+        <div class="flex w-full">
+          <div class="mt-5 min-h-screen text-white w-full">
+            <h1 class="text-white text-xl uppercase">Creating resource</h1>
+            <div class="mt-4 flex flex-col mr-5">
+              <label class="font-bold mt-3 uppercase" for="title">Title</label>
+              <input class="p-1 bg-slate-600/30 border border-slate-300/30 rounded-lg"
+              type="text" [(ngModel)]="editResource.title" name="title">
+
+              <label class="font-bold mt-3 uppercase" for="description">Description</label>
+              <textarea class="p-1 bg-slate-600/30 border border-slate-300/30 rounded-lg"
+              type="text" [(ngModel)]="editResource.description" name="description" rows="4"></textarea>
+
+              <label class="font-bold mt-3 uppercase" for="link">Link</label>
+              <input class="p-1 bg-slate-600/30 border border-slate-300/30 rounded-lg"
+              type="text" [(ngModel)]="editResource.link" name="link">
+
+              <label class="font-bold mt-3 uppercase" for="image_url">Image URL</label>
+              <input class="p-1 bg-slate-600/30 border border-slate-300/30 rounded-lg"
+              type="text" [(ngModel)]="editResource.image_url" name="image_url">
+
+              <div class="flex">
+                <button
+                  class="text-sm p-2 rounded-md bg-green-600 text-white hover:bg-green-700 hover:cursor-pointer mt-5"
+                  (click)="confirmCreate()"
+                >
+                 Confirm
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      }
+      @else {
+        <div class="flex">
+          <div class="max-h-screen overflow-y-auto min-w-1/3">
+            @for (item of getResources(); track item) {
+            <div
+              class="border-b border-b-slate-500/30 hover:rounded-lg p-3 flex flex-col gap-2 justify-center hover:bg-slate-700/50 transition-all"
+            >
+              <div class="flex gap-2">
+                <p class="font-semibold">{{item.id}}. {{ item.title }}</p>
+              </div>
+              <p class="text-white/80">{{ item.description }}</p>
+              <p class="text-sm text-white/60">Link: {{ item.link }}</p>
+              <div class="flex">
+                <button
+                  class="text-sm px-3 py-1 rounded-md bg-sky-600 text-white hover:bg-sky-700 hover:cursor-pointer"
+                  (click)="edit(item)"
+                >
+                  Edit
+                </button>
+
+                <button
+                  class="text-sm px-3 py-1 rounded-md bg-red-600 text-white ml-2 hover:bg-red-700 hover:cursor-pointer"
+                  (click)="delete(item.id ?? -1)"
+                >
+                  Delete
+                </button>
+              </div>
+            </div>
+            }
+          </div>
+
+          @if(editResource != null){
+            <div class="mt-5 pl-5 min-h-screen border-l border-l-slate-500/30 text-white w-full">
+              <h1 class="text-white text-xl uppercase">EDITING {{editResource.id}}</h1>
+              <div class="mt-4 flex flex-col">
+
+                <label class="font-bold mt-3 uppercase" for="title">Title</label>
+                <input class="p-1 bg-slate-600/30 border border-slate-300/30 rounded-lg w-3/4"
+                type="text" [(ngModel)]="editResource.title" name="title">
+
+                <label class="font-bold mt-3 uppercase" for="description">Description</label>
+                <textarea class="p-1 bg-slate-600/30 border border-slate-300/30 rounded-lg w-3/4"
+                type="text" [(ngModel)]="editResource.description" name="description" rows="4"></textarea>
+
+                <label class="font-bold mt-3 uppercase" for="link">Link</label>
+                <input class="p-1 bg-slate-600/30 border border-slate-300/30 rounded-lg w-3/4"
+                type="text" [(ngModel)]="editResource.link" name="link">
+
+                <label class="font-bold mt-3 uppercase" for="image_url">Image URL</label>
+                <input class="p-1 bg-slate-600/30 border border-slate-300/30 rounded-lg w-3/4"
+                type="text" [(ngModel)]="editResource.image_url" name="image_url">
+
+                <div class="flex gap-2">
+                  <button
+                    class="text-sm p-2 rounded-md bg-green-600 text-white hover:bg-green-700 hover:cursor-pointer mt-5"
+                    (click)="confirmEdit()"
+                  >
+                   Confirm
+                  </button>
+
+                  <button
+                    class="text-sm p-2 rounded-md bg-blue-600 text-white hover:bg-blue-700 hover:cursor-pointer mt-5"
+                    (click)="cancelEdit()"
+                  >
+                   Cancel
+                  </button>
+                </div>
+              </div>
+            </div>
+          }
+        </div>
+      }
+    </div>
+  }
 </div>
