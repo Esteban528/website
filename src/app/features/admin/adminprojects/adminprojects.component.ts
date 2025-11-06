@@ -17,8 +17,8 @@ export class AdminprojectsComponent implements OnInit {
   loading = true;
   creating = false;
   editProject!: Project | null;
-  user: string = "admin";
-  password: string = "admin";
+  user: string = "";
+  password: string = "";
 
   constructor(private service: ProjectsService, private api: ApiService) {
   }

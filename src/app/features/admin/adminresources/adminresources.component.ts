@@ -17,8 +17,8 @@ export class AdminresourcesComponent implements OnInit {
   loading = true;
   creating = false;
   editResource!: Resource | null;
-  user: string = "admin";
-  password: string = "admin";
+  user: string = "";
+  password: string = "";
 
   constructor(private service: ProjectsService, private api: ApiService) {
   }

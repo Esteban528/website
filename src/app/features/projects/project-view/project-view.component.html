@@ -9,7 +9,7 @@
   <h1 class="text-center font-bold text-2xl mt-4">{{ project.title }}</h1>
 
   <div class="flex gap-2 my-2">
-    @if(project.visit_url) {
+    @if(project.visit_url && project.visit_url.length > 7) {
       <a
         [href]="project.visit_url"
         target="_blank"
@@ -22,7 +22,7 @@
       </a>
     }
 
-    @if (project.source_url) {
+    @if (project.source_url && project.source_url.length > 7) {
       <a
         [href]="project.source_url"
         target="_blank"

@@ -20,8 +20,8 @@ export class AdminblogComponent implements OnInit {
   loading = true;
   creating = false;
   editPost!: Post | null;
-  user: string = "admin";
-  password: string = "admin";
+  user: string = "";
+  password: string = "";
 
   constructor(private service: BlogDataService, private api: ApiService, public utils:UtilsService) {
   }
