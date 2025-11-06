@@ -72,17 +72,19 @@ export type Post = {
 };
 
 export type Project = {
-  title: string;
-  description: string;
-  visit_url: string;
-  source_url: string;
-  youtube_url: string;
-  image_url: string
+  id?: number
+  title?: string;
+  description?: string;
+  visit_url?: string;
+  source_url?: string;
+  youtube_url?: string;
+  image_url?: string
 }
 
 export type Resource = {
-  title: string;
-  description: string;
-  link: string;
-  image_url: string;
+  id?: number;
+  title?: string;
+  description?: string;
+  link?: string;
+  image_url?: string;
 }
