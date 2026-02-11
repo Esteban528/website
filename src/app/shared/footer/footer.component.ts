@@ -10,5 +10,5 @@ import { LocationEdit, LucideAngularModule, Mail, MapPinned } from 'lucide-angul
 export class FooterComponent {
   readonly Mail = Mail;
   readonly Location = MapPinned;
-  email = "esteban@estebandev.xyz";
+  email = "esteban@estebandev.cc";
 }
